@@ -21,5 +21,4 @@
 * Nodemon (optional, for development use only)
 
 **Deployment**
-[https://glacial-atoll-67416.herokuapp.com/]
-Deployed to heroku.
+* [https://glacial-atoll-67416.herokuapp.com/] Deployed to heroku.
