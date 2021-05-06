@@ -9,10 +9,10 @@
     * Delete contacts by id.
 
 **ROUTES**
-`router.post` For creating new user
-`router.get` For getting all users and individual user
-`router.put` For updating user
-`router.delete` For deleting user
+* `router.post` For creating new user
+* `router.get` For getting all users and individual user
+* `router.put` For updating user
+* `router.delete` For deleting user
 
 **Required packages**
 * Express
