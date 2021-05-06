@@ -4,7 +4,7 @@
 * Users can:
     * Create new contacts.
     * Fetch all contacts.
-    * Fetch specific contsct by id.
+    * Fetch specific contact by id.
     * Update contacts by id.
     * Delete contacts by id.
 
