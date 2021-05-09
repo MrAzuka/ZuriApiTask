@@ -21,4 +21,4 @@
 * Nodemon (optional, for development use only)
 
 **Deployment**
-* [] Deployed to heroku.
+* [https://zuricontactapi.herokuapp.com/] Deployed to heroku.
