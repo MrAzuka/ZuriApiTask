@@ -8,9 +8,11 @@ exports.createUser = (req,res)=>{
         country: req.body.country
     }, (err, newInfo)=>{
         if (err){
-            res.status(500).json({message: err})
+            // res.status(500).json({message: err})
+            res.send({message: err})
         }else{
-            res.status(200).json({message: "New user successfully added", data: newInfo})
+            // res.status(200).json({message: "New user successfully added", data: newInfo})
+            res.send({message: "New user successfully added", data: newInfo})
         }
     })
 }
@@ -19,9 +21,11 @@ exports.createUser = (req,res)=>{
 exports.getAll = (req,res)=>{
     data.find({}, (err,newInfo)=>{
         if(err){
-            res.status(500).json({message: err})
+            // res.status(500).json({message: err})
+            res.send({message: err})
         }else{
-            res.status(200).json({message: "All Users found", data: newInfo})
+            // res.status(200).json({message: "All Users found", data: newInfo})
+            res.send({message: "All Users found", data: newInfo})
         }
     }) 
 }
@@ -29,12 +33,16 @@ exports.getAll = (req,res)=>{
 exports.getUser = (req,res)=>{
     data.findById(req.params.id, (err,newInfo)=>{
         if(err){
-            res.status(500).json({message: err})
+            // res.status(500).json({message: err})
+            res.send({message: err})
         }else if(!newInfo){
-            res.status(404).json({message: "Contact not found"})
+            // res.status(404).json({message: "Contact not found"})
+            res.send({message: "contact not found"})
         }
         else{
-            res.status(200).json({message: "Found User",data: newInfo})
+            // res.status(200).json({message: "Found User",data: newInfo})
+            res.send({message: "Found User", data: newInfo})
+        
         }
     })
 }
@@ -47,17 +55,22 @@ exports.updateUser =  (req,res)=>{
         country: req.body.country
     },(err, newInfo)=>{
         if(err){
-            res.status(500).json({message: err})
+            // res.status(500).json({message: err})
+            res.send({message: err})
         }else if(!newInfo){
-            res.status(404).json({message: "Contact not found"})
+            // res.status(404).json({message: "Contact not found"})
+            res.send({message: "contact not found"})
         }
         else{
             newInfo.save((err, savedInfo)=>{
                 if(err){
-                    res.json({message: err})
+                    // res.json({message: err})
+                    res.send({message: err})
                 }
                 else{
-                    res.status(200).json({message: "Contact Updated", data: savedInfo})
+                    // res.status(200).json({message: "Contact Updated", data: savedInfo})
+                    res.send({message: "Contact Updated", data: savedInfo})
+        
                 }
             })
         }
@@ -67,12 +80,16 @@ exports.updateUser =  (req,res)=>{
 exports.deleteUser =  (req,res)=>{
     data.findByIdAndDelete(req.params.id,(err,newInfo)=>{
         if(err){
-            res.status(500).json({message: err})
+            // res.status(500).json({message: err})
+            res.send({message: err})
         }else if(!newInfo){
-            res.status(404).json({message: "Contact not found"})
+            // res.status(404).json({message: "Contact not found"})
+            res.send({message: "contact not found"})
         }
         else{
-            res.status(200).json({message: "User deleted"})
+            // res.status(200).json({message: "User deleted"})
+            res.send({message: "User deleted"})
+        
         }
     })
 }
