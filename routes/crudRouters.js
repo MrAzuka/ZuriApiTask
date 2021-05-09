@@ -4,14 +4,14 @@ const {data} = require('../models/dataSchema.js')
 const {createUser, getAll,
         getUser,updateUser, deleteUser} = require('../controllers/crudControllers.js')
 
-router.post('/info', createUser)
+router.post('/', createUser)
 
-router.get('/info', getAll)
+router.get('/', getAll)
 
-router.get('/info/:id', getUser)
+router.get('/:id', getUser)
 
-router.put('/info/:id', updateUser)
+router.put('/:id', updateUser)
 
-router.delete('/info/:id', deleteUser)
+router.delete('/:id', deleteUser)
 
 module.exports = router
